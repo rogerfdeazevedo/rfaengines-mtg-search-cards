@@ -5,13 +5,18 @@ import org.openqa.selenium.support.FindBy;
 
 import com.br.rfaengines.testautomation.selenium.pageobject.AbstractPageObject;
 
-public class CardsPage extends AbstractPageObject {
-
+public class CardsPage extends AbstractPageObject {	
+	
 	@FindBy (css = "input[id='card']")
 	private WebElement campoNomeDoCard;
 	
 	@FindBy (xpath = "//*[@id='principal']/button")
 	private WebElement botaoLupaPesquisar;
+	
+	public CardsPage limparCampoNomeDoCard() {
+		this.campoNomeDoCard.clear();
+		return this;
+	}
 	
 	public CardsPage preencherCampoNomeDoCard(String nomeDaCarta) {
 		this.campoNomeDoCard.sendKeys(nomeDaCarta);
@@ -23,12 +28,8 @@ public class CardsPage extends AbstractPageObject {
 		return this;
 	}
 	
-	public boolean pesquisaRealizadaComSucesso(String nomeDaCarta) {
-		return new CardsResultSearchPage().pesquisaRealizadaComSucesso(nomeDaCarta);
-	}
-	
-	public String getNomeDoCardEmENG() {
-		return new CardsResultSearchPage().getNomeDoCardEmENG();
+	public ResultadoPesquisaPage resultadoDaPesquisa() {
+		return new ResultadoPesquisaPage();
 	}
 	
 }

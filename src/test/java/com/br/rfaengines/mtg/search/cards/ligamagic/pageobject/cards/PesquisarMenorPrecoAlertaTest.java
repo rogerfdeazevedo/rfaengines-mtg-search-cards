@@ -7,20 +7,20 @@ import org.testng.annotations.Test;
 import com.br.rfaengines.testautomation.selenium.report.ReportTestManager;
 import com.br.rfaengines.testautomation.selenium.test.BaseTest;
 
-public class PesquisarCartaTest extends BaseTest {
+public class PesquisarMenorPrecoAlertaTest extends BaseTest {
 
-	@Test(groups = { "Ligamagic" }, description = "Realizar uma pesquisa com sucesso.")
-	public void pesquisarCarta() {
-
+	@Test(groups = { "Ligamagic" }, description = "Pesquisar o menor preço uma carta.")
+	public void pesquisarMenorPreco() {
+		
 		String nomeDaCarta = "Arcanjo Avacyn";
 
 		CardsPage pesquisa = new CardsPage();
 
 		pesquisa.preencherCampoNomeDoCard(nomeDaCarta)
 					.clicarNoBotaoDePesquisaLupa();
-
+		
 		assertTrue(pesquisa.resultadoDaPesquisa()
-								.pesquisaRealizadaComSucesso(nomeDaCarta));			
+								.pesquisaRealizadaComSucesso(nomeDaCarta));				
 		
 		StringBuilder resultado = new StringBuilder();
 
@@ -28,10 +28,11 @@ public class PesquisarCartaTest extends BaseTest {
 					.append(nomeDaCarta).append("<br> <b> ENG-US Nome:  </b>")
 						.append(pesquisa.resultadoDaPesquisa().getNomeDoCardEmENG())
 							.append("<br><b>Menor Preco: </b>")
-								.append("<br>");
+								.append(pesquisa.resultadoDaPesquisa().alertaDePreco().getMenorPreco())
+									.append("<br>");
 
-		ReportTestManager.adicionarEvidencia(resultado.toString());		
-
+		ReportTestManager.adicionarEvidencia(resultado.toString());	
+		
 	}
 
 }
