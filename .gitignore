@@ -1,8 +1,6 @@
 # .gitignore -Ignorar
 .settings/
-logs/
-files/export/
-files/import/
+files/
 target/
 test-output/
 .classpath

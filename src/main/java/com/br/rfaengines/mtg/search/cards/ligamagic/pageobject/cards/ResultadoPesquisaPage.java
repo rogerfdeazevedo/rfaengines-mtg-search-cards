@@ -13,6 +13,9 @@ import com.br.rfaengines.testautomation.selenium.util.PropertiesUtil;
 
 public class ResultadoPesquisaPage {
 
+	@FindBy(css = "img[id='edcardimage']")
+	private WebElement srcImagemDaCarta;
+	
 	@FindBy(xpath = "//div[@id='card-info']/div[1]/div[1]/p[1]")
 	private WebElement nomeDoCardEmPTBR;
 
@@ -60,6 +63,15 @@ public class ResultadoPesquisaPage {
 		} catch (Exception e) {			
 		}				
 		return isLoad;
+	}
+	
+	public String getSrcImagemDaCarta() {
+		String nome = "";
+		try {
+			nome = this.srcImagemDaCarta.getAttribute("src");
+		} catch (Exception e) {			
+		}
+		return nome;
 	}
 
 	public String getNomeDoCardEmPTBR() {

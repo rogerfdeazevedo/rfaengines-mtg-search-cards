@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 
 import com.br.rfaengines.testautomation.selenium.report.ReportTestManager;
 import com.br.rfaengines.testautomation.selenium.test.BaseTest;
+import com.br.rfaengines.testautomation.selenium.util.ImagensUtil;
 
 public class PesquisarCartaTest extends BaseTest {
 
@@ -21,6 +22,15 @@ public class PesquisarCartaTest extends BaseTest {
 
 		assertTrue(pesquisa.resultadoDaPesquisa()
 								.pesquisaRealizadaComSucesso(nomeDaCarta));			
+		
+		String src = pesquisa.resultadoDaPesquisa().getSrcImagemDaCarta();
+		
+		StringBuilder dirDestino = new StringBuilder();
+
+		dirDestino.append(ReportTestManager.getDirEvidencias().replace("evidencias", ""))
+					.append("imgs-cards/").append(nomeDaCarta.toLowerCase().replace(" ", "-"));
+		
+		ImagensUtil.salvarWebImagem(src, dirDestino.toString());
 		
 		StringBuilder resultado = new StringBuilder();
 
