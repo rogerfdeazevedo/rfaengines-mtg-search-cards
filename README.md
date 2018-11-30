@@ -7,14 +7,25 @@ Em sites como:
 * ligamagic
 * edhrec
 
+## Get started
+
+* [Como instalar](docs/como_instalar.md)
+* [Como executar](docs/como_executar.md)
+* [Como ver o resultado de execução](docs/como_ver_resultado_da_execucao.md)
+* [Como ler o log de erro](docs/como_ler_log_de_erro.md)
+
 ## Funcionalidades
 
-# Ligamagic - Pesquisar Menor Preco Em Lote 
+# Ligamagic - Pesquisar Menor Preco Em Lote
 
 	Pesquisar o menor preco de cada carta a partir de uma lista.
    
 
-* Importa lista de cartas (Arquivo de texto - formato MOL);
+* Suite execução: 
+	
+	ligamagic_pesquisar_menor_preco_em_lote
+
+* Importa lista de cartas (Arquivo de texto - formato MOL) em; files/import
 * Busca pelo menor preço na Seção de "Alerta de Preços" no result search da ligamagic;
 * Gera report hmtl com resultado das buscas (Nome da carta em PT-BR/ENG-US + printscreen);
 * Exporta lista de cartas com resultado da busca;
@@ -41,12 +52,6 @@ Em sites como:
 * Projeto framework 
 * Drivers selenium em: C:/selenium/drivers
 
-## Instalação
-
-* Clone (download) do projeto framework (dependência) : https://github.com/rogerfdeazevedo/rfaengines-testautomation-selenium
-* Instalação/Atualização do Java: https://www.devmedia.com.br/preparacao-do-ambiente-para-desenvolvimento-em-java/25188
-* Instalação/Atualização do Maven: http://luizricardo.org/2014/06/instalando-configurando-e-usando-o-maven-para-gerenciar-suas-dependencias-e-seus-projetos-java/
-* Download drivers: https://www.seleniumhq.org/download/
 	
 	@roger_azevedo 
 	rogerfdeazevedo@gmail.com
