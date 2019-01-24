@@ -40,7 +40,7 @@ public class PesquisarMenorPrecoEmLoteAlertaDePrecoTest extends BaseTest {
 
 			listaDeCartasParaExportar = new ArrayList<String>();
 			listaDeCartasParaExportar.add(
-					"qtd; nome-PT-BR; nome-ENG-US; cor; custo-de-mana; curva-de-mana; tipo; preco-menor; comprar;");
+					"qtd; nome-PT-BR; nome-ENG-US; cor; custo-de-mana; curva-de-mana; tipo; preco-menor; ja-tenho; comprar;");
 
 			CardsPage pesquisa = new CardsPage();
 
@@ -56,17 +56,23 @@ public class PesquisarMenorPrecoEmLoteAlertaDePrecoTest extends BaseTest {
 
 					pesquisa.limparCampoNomeDoCard()
 								.preencherCampoNomeDoCard(nomeDaCarta)
-									.clicarNoBotaoDePesquisaLupa();
-
-					StringBuilder resultado = new StringBuilder();
+									.clicarNoBotaoDePesquisaLupa();					
 
 					boolean achouCarta = pesquisa.resultadoDaPesquisa().pesquisaRealizadaComSucesso(nomeDaCarta);
+					
+					StringBuilder resultado = new StringBuilder();
 
 					if (achouCarta) {
 
 						String nomePTBR = pesquisa.resultadoDaPesquisa().getNomeDoCardEmPTBR();
 						String nomeENGUS = pesquisa.resultadoDaPesquisa().getNomeDoCardEmENG();
+						String corDaCarta = pesquisa.resultadoDaPesquisa().getCorDaCarta();
+						String custoDeMana = pesquisa.resultadoDaPesquisa().getCustoDeMana();
+						String curvaDeMana = pesquisa.resultadoDaPesquisa().getCurvaDeMana();
+						String tipoDaCarta = pesquisa.resultadoDaPesquisa().getTipoDaCarta();
 						String menorPreco = pesquisa.resultadoDaPesquisa().alertaDePreco().getMenorPreco();
+						
+						
 
 						resultado.append("<b> PT-BR Nome: </b> ").append(nomePTBR)
 									.append("<br> <b> ENG-US Nome:  </b>").append(nomeENGUS)
@@ -76,16 +82,15 @@ public class PesquisarMenorPrecoEmLoteAlertaDePrecoTest extends BaseTest {
 
 						cartaParaExportar.append(nomePTBR).append("; ");
 						cartaParaExportar.append(nomeENGUS).append("; ");
-						cartaParaExportar.append(pesquisa.resultadoDaPesquisa().getCorDaCarta()).append("; ");
-						cartaParaExportar.append(pesquisa.resultadoDaPesquisa().getCustoDeMana()).append("; ");
-						cartaParaExportar.append(pesquisa.resultadoDaPesquisa().getCurvaDeMana()).append("; ");
-						cartaParaExportar.append(pesquisa.resultadoDaPesquisa().getTipoDaCarta()).append("; ");
+						cartaParaExportar.append(corDaCarta).append("; ");
+						cartaParaExportar.append(custoDeMana).append("; ");
+						cartaParaExportar.append(curvaDeMana).append("; ");
+						cartaParaExportar.append(tipoDaCarta).append("; ");
 						cartaParaExportar.append(menorPreco).append("; ");
 
 						listaDeCartasParaExportar.add(cartaParaExportar.toString());
 
 					} else {
-
 						resultado.append("<b> Nome Pesquisado: </b> ").append(nomeDaCarta)
 									.append("<br> Verifique se o nome da carta pesquisado esta correto. <br>");
 
