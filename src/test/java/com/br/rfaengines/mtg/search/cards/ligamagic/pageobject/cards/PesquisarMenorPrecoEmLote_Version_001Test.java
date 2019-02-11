@@ -14,7 +14,7 @@ import com.br.rfaengines.testautomation.selenium.util.DataHoraUtil;
 import com.br.rfaengines.testautomation.selenium.util.PropertiesUtil;
 import com.relevantcodes.extentreports.LogStatus;
 
-public class PesquisarMenorPrecoEmLoteAlertaDePrecoTest extends BaseTest {
+public class PesquisarMenorPrecoEmLote_Version_001Test extends BaseTest {
 
 	@Test(groups = { "Ligamagic" }, description = "Pesquisar o menor preco de cada carta a partir de uma lista.")
 	public void pesquisarMenorPreco() {

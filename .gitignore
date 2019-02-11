@@ -5,3 +5,5 @@ target/
 test-output/
 .classpath
 .project
+backlog.txt
+gitlab-ci.yml.txt

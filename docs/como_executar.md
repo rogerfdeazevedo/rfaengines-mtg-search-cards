@@ -11,4 +11,5 @@ Os testes podem ser executados de duas maneiras:
 * Acessar diretorio do projeto, através do prompt de comando;
 * Executar o comando conforme exemplo: 
 	
-	mvn test -Pfunction-execution -Dsuite=ligamagic_pesquisar_menor_preco_em_lote
+	mvn test -Pfunction-execution -Dsuite=ligamagic_pesquisar_menor_preco_em_lote	
+	
