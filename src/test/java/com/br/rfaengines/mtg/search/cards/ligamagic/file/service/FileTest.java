@@ -1,4 +1,4 @@
-package com.br.rfaengines.mtg.search.cards.ligamagic.file;
+package com.br.rfaengines.mtg.search.cards.ligamagic.file.service;
 
 import java.util.List;
 
