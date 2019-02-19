@@ -79,7 +79,7 @@ public class ProcessExportFile {
 			line
 			.append(cardData.getNomePTBR()).append(";")
 			.append(cardData.getColor()).append(";")
-			.append(cardData.getCast()).append(";")
+			.append(cardData.getManaCost()).append(";")
 			.append(cardData.getCmc()).append(";")
 			.append(cardData.getType()).append(";")
 			.append(cardData.getEfeitoQtd()).append(";")

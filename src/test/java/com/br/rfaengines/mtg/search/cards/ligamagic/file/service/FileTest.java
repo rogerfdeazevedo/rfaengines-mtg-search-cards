@@ -5,8 +5,7 @@ import java.util.List;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import com.br.rfaengines.mtg.search.cards.ligamagic.file.service.ExportFileService;
-import com.br.rfaengines.mtg.search.cards.ligamagic.file.service.ImportFileService;
+import com.br.rfaengines.mtg.search.cards.ligamagic.apimtg.service.ApiMtgService;
 import com.br.rfaengines.mtg.search.cards.ligamagic.file.vo.FileSearch;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -36,10 +35,12 @@ public class FileTest {
 		ImportFileService importFileService = new ImportFileService(pathIn, extensionIn, extensionProc);
 
 		List<FileSearch> fileSearchList = importFileService.importFile();
-
-		String str = mapper.writeValueAsString(fileSearchList);
-
-		System.out.println("fileSearchList: " + str);
+		
+		ApiMtgService apiMtg = new ApiMtgService(fileSearchList);
+		
+		fileSearchList = apiMtg.processFileSearchList();
+		
+		System.out.println("fileSearchList: " + mapper.writeValueAsString(fileSearchList));
 
 		ExportFileService exportFileService = new ExportFileService(pathOut, fileSearchList, isResultSearchFile);
 

@@ -13,7 +13,7 @@ public class HeaderFile {
 		.append("NameENGUS").append(";")
 		.append("NomePTBR").append(";")
 		.append("Color").append(";")
-		.append("Cast").append(";")
+		.append("ManaCost").append(";")
 		.append("Cmc").append(";")
 		.append("Type").append(";")
 		.append("EfeitoQtd").append(";")

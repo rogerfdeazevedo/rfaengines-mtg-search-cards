@@ -16,7 +16,7 @@ public class CardData {
 	private String dataPesquisa;
 	private List<Loja> lojas;
 	private String color;
-	private String cast;
+	private String manaCost;
 	private String cmc;
 	private String type;
 	private String efeitoQtd;
@@ -35,6 +35,14 @@ public class CardData {
 	public String getQtd() {
 		return qtd;
 	}
+	public String getManaCost() {
+		return manaCost;
+	}
+
+	public void setManaCost(String manaCost) {
+		this.manaCost = manaCost;
+	}
+
 	public void setQtd(String qtd) {
 		this.qtd = qtd;
 	}
@@ -91,12 +99,6 @@ public class CardData {
 	}
 	public void setColor(String color) {
 		this.color = color;
-	}
-	public String getCast() {
-		return cast;
-	}
-	public void setCast(String cast) {
-		this.cast = cast;
 	}
 	public String getCmc() {
 		return cmc;
