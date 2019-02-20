@@ -82,6 +82,7 @@ public class ProcessExportFile {
 			.append(cardData.getManaCost()).append(";")
 			.append(cardData.getCmc()).append(";")
 			.append(cardData.getType()).append(";")
+			.append(cardData.getTexto()).append(";")
 			.append(cardData.getEfeitoQtd()).append(";")
 			.append(cardData.getEfeitoDrawBackQtd()).append(";")
 			.append(cardData.getEfeitoScore()).append(";")
@@ -94,6 +95,7 @@ public class ProcessExportFile {
 			.append(cardData.getPrecoMenor()).append(";")
 			.append(cardData.getEstado()).append(";")
 			.append(cardData.getLojaMenorPreco()).append(";")
+			.append(cardData.getDataPesquisa()).append(";")
 //			.append(cardData.getLojas()).append(";")			
 			;
 		}		

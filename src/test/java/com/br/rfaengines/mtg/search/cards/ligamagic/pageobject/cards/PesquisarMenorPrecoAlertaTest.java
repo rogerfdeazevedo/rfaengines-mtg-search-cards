@@ -9,7 +9,7 @@ import com.br.rfaengines.testautomation.selenium.test.BaseTest;
 
 public class PesquisarMenorPrecoAlertaTest extends BaseTest {
 
-	@Test(groups = { "Ligamagic" }, description = "Pesquisar o menor preço uma carta.")
+	@Test(groups = { "ignore" }, description = "Pesquisar o menor preço uma carta.")
 	public void pesquisarMenorPreco() {
 		
 		String nomeDaCarta = "Arcanjo Avacyn";

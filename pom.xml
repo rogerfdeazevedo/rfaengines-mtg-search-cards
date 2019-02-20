@@ -30,7 +30,7 @@
   
   <profiles>
         <profile>
-            <id>function-execution</id>
+            <id>web-execution</id>
             <build>
                 <plugins>
                     <plugin>

@@ -66,7 +66,7 @@ public class ExportFileService {
 	}
 	
 	public String getDate() {
-		SimpleDateFormat sdfDate = new SimpleDateFormat("yyyymmddhhMMss");
+		SimpleDateFormat sdfDate = new SimpleDateFormat("yyyyMMdd-HHmmss");
 		Date now = new Date();
 		String strDate = sdfDate.format(now);
 		return strDate;

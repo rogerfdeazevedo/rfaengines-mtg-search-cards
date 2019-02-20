@@ -10,7 +10,7 @@ import com.br.rfaengines.testautomation.selenium.util.ImagensUtil;
 
 public class PesquisarCartaTest extends BaseTest {
 
-	@Test(groups = { "Ligamagic" }, description = "Realizar uma pesquisa com sucesso.")
+	@Test(groups = { "ignore" }, description = "Realizar uma pesquisa com sucesso.")
 	public void pesquisarCarta() {
 
 		String nomeDaCarta = "Arcanjo Avacyn";

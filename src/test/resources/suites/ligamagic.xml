@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="ligamagic" parallel="false">
+
+  <test name="Test">
+  
+  	<groups>
+  		<run>
+  			<include name="ligamagic"/>
+  			<exclude name="ignore"/>  		
+  		</run>  	
+  	</groups>
+  
+    <classes>
+      <class name="com.br.rfaengines.mtg.search.cards.ligamagic.file.service.FileTest"/>
+    </classes>
+    
+  </test> <!-- Test -->
+  
+</suite> <!-- Suite -->

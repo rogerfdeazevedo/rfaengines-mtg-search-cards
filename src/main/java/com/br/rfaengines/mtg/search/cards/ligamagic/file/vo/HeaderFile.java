@@ -16,6 +16,7 @@ public class HeaderFile {
 		.append("ManaCost").append(";")
 		.append("Cmc").append(";")
 		.append("Type").append(";")
+		.append("Texto").append(";")
 		.append("EfeitoQtd").append(";")
 		.append("EfeitoDrawBackQtd").append(";")
 		.append("EfeitoScore").append(";")
@@ -28,6 +29,7 @@ public class HeaderFile {
 		.append("PrecoMenor").append(";")
 		.append("Estado").append(";")
 		.append("LojaMenorPreco").append(";")
+		.append("DataPesquisa").append(";")
 //		.append("Lojas").append(";")			
 		;
 		
